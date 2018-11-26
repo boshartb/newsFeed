@@ -1,27 +1,28 @@
 import React, { Component } from "react";
 // import Newsfeed from "./Newsfeed";
 import TopNav from "./TopNav";
+import newsFeedData from "./data";
 
-const newsFeedData = [
-  {
-    title: "Lorem Ipsum",
-    tags: "Placeholder1",
-    image: "https://loremflickr.com/400/250/dog?a",
-    impressions: "10"
-  },
-  {
-    title: "Dolor Sit Amet",
-    tags: "Placeholder2",
-    image: "https://loremflickr.com/400/250/dog?b",
-    impressions: "15"
-  },
-  {
-    title: "Nesque Ipsum",
-    tags: "Placeholder2",
-    image: "https://loremflickr.com/400/250/dog?c",
-    impressions: "100"
-  }
-];
+// const newsFeedData = [
+//   {
+//     title: "Lorem Ipsum",
+//     tags: "Placeholder1",
+//     image: "https://loremflickr.com/400/250/dog?a",
+//     impressions: "10"
+//   },
+//   {
+//     title: "Dolor Sit Amet",
+//     tags: "Placeholder2",
+//     image: "https://loremflickr.com/400/250/dog?b",
+//     impressions: "15"
+//   },
+//   {
+//     title: "Nesque Ipsum",
+//     tags: "Placeholder2",
+//     image: "https://loremflickr.com/400/250/dog?c",
+//     impressions: "100"
+//   }
+// ];
 
 function Newsfeed(props) {
   const content = props.newsFeedData.map(newsFeedData => (
