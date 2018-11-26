@@ -3,48 +3,28 @@ import React, { Component } from "react";
 import TopNav from "./TopNav";
 import newsFeedData from "./data";
 
-// const newsFeedData = [
-//   {
-//     title: "Lorem Ipsum",
-//     tags: "Placeholder1",
-//     image: "https://loremflickr.com/400/250/dog?a",
-//     impressions: "10"
-//   },
-//   {
-//     title: "Dolor Sit Amet",
-//     tags: "Placeholder2",
-//     image: "https://loremflickr.com/400/250/dog?b",
-//     impressions: "15"
-//   },
-//   {
-//     title: "Nesque Ipsum",
-//     tags: "Placeholder2",
-//     image: "https://loremflickr.com/400/250/dog?c",
-//     impressions: "100"
-//   }
-// ];
-
-function Newsfeed(props) {
-  const content = props.newsFeedData.map(newsFeedData => (
+function Info(props) {
+  const content = props.newsFeedData.map(newsFeedDataObject => (
     <div>
       <ul class="list-group-item">
         <ul class="list-unstyled">
           <li class="media">
             <img
               class="avatar mr-3 rounded-0"
-              src={newsFeedData.image}
+              src={newsFeedDataObject.image}
               alt="Generic placeholder image"
             />
             <div class="media-body">
-              <h5 class="mt-0 mb-1">{newsFeedData.title} </h5>
-              {newsFeedData.tags}
-              <p>{newsFeedData.impressions}</p>
+              <h5 class="mt-0 mb-1">{newsFeedDataObject.title} </h5>
+              <p>{newsFeedDataObject.tags}</p>
+              <p>{newsFeedDataObject.impressions}</p>
             </div>
           </li>
         </ul>
       </ul>
     </div>
   ));
+
   return (
     <div>
       <ul> {content}</ul>
@@ -58,7 +38,7 @@ class App extends Component {
       <div className="App">
         <TopNav />
         <ul className="newsFeedData" />
-        <Newsfeed newsFeedData={newsFeedData} />
+        <Info newsFeedData={newsFeedData} />
       </div>
     );
   }
